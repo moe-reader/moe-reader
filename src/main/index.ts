@@ -27,6 +27,14 @@ function createWindow(): void {
     mainWindow.show()
   })
 
+  mainWindow.hookWindowMessage(278, function () {
+    mainWindow.setEnabled(false) //窗口禁用
+    setTimeout(() => {
+      mainWindow.setEnabled(true)
+    }, 100) //延时太快会立刻启动，太慢会妨碍窗口其他操作，可自行测试最佳时间
+    return true
+  })
+
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
     return { action: 'deny' }
