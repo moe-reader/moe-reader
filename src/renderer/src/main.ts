@@ -3,6 +3,7 @@ import MainApp from './App.vue'
 import { registerMicroApps, start } from 'qiankun'
 import i18next from '../../locales'
 import i18NextVue from 'i18next-vue'
+import 'uno.css'
 
 function initVueApp(App: Component): App {
   return createApp(App).use(i18NextVue, { i18next })
