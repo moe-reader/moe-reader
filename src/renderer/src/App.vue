@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import Versions from './components/Versions.vue'
+const targetPage = `${location.origin}/vue`
+
+if (location.href !== targetPage) {
+  location.href = targetPage
+}
 </script>
 
 <template>
-  <Versions></Versions>
+  <div id="sub-app"></div>
 </template>
 
 <style lang="less">

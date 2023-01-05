@@ -7,5 +7,23 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ],
+  "i18n-ally.translate.engines": [
+    "google",
+    "google-cn",
+    "deepl",
+    "libretranslate"
+  ],
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.enabledFrameworks": [
+    "vue",
+    "react"
+  ],
+  "i18n-ally.sourceLanguage": "zh-CN",
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.extract.keygenStyle": "camelCase",
+  "i18n-ally.keystyle": "nested",
 }
