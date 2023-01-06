@@ -1,32 +1,13 @@
 :root {
-  --ifm-color-primary: #fccf31;
-  --ifm-color-success: #36ab88;
-  --ifm-color-info: #368fab;
-  --ifm-color-warning: #aba336;
-  --ifm-color-danger: #ab3e36;
-  --ifm-color-gray-0: #fff;
-  --ifm-color-gray-100: #f7f9fd;
-  --ifm-color-gray-200: #e7edf9;
-  --ifm-color-gray-300: #d7e1f4;
-  --ifm-color-gray-400: #a9b8d6;
-  --ifm-color-gray-500: #8f9ebc;
-  --ifm-color-gray-600: #6c7993;
-  --ifm-color-gray-700: #435270;
-  --ifm-color-gray-800: #2d333b;
-  --ifm-color-gray-900: #444c56;
-  --ifm-color-gray-1000: #272c35;
-  --ifm-color-gray-2000: #272c35;
-  --ifm-menu-color: var(--ifm-color-emphasis-600);
-  --ifm-menu-color-active: var(--ifm-color-emphasis-1000);
-  --ifm-navbar-item-padding-horizontal: 1.5rem;
-  --ifm-navbar-link-color: var(--ifm-color-emphasis-600);
-  --ifm-navbar-link-hover-color: var(--ifm-menu-color-active);
-  --ifm-navbar-padding-horizontal: 1.5rem;
-  --ifm-navbar-shadow: none;
-  --doc-sidebar-width: 300px;
-  --doc-sidebar-hidden-width: 30px;
-  --ifm-border-color: var(--ifm-color-gray-900);
-  --ifm-subtitle-color: var(--ifm-color-gray-800);
+  --color-primary: #fccf31;
+  --color-success: #36ab88;
+  --color-info: #368fab;
+  --color-warning: #aba336;
+  --color-danger: #ab3e36;
+  --color-background-default: #22272e;
+  --color-background-inset: #1c2128;
+  --color-border-default: #444c56;
+  --color-border-muted: #373e47;
 }
 
 * {
@@ -38,13 +19,14 @@ html {
 }
 
 body {
-  background-color: var(--ifm-color-gray-1000);
+  background-color: var(--color-background-inset);
   -webkit-app-region: drag;
   height: 100vh;
   padding: 0;
   margin: 0;
 }
 
-button, a {
+button,
+a {
   -webkit-app-region: no-drag;
 }
