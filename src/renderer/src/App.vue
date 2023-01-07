@@ -1,13 +1,18 @@
 <script setup lang="ts">
-const targetPage = `${location.origin}/vue`
+import Sidebar from './components/Sidebar/index.vue'
+import MicroApp from './components/MicroApp/index.vue'
+// const targetPage = `${location.origin}/vue`
 
-if (location.href !== targetPage) {
-  location.href = targetPage
-}
+// if (location.href !== targetPage) {
+//   location.href = targetPage
+// }
 </script>
 
 <template>
-  <div id="sub-app"></div>
+  <div flex flex-row h-full>
+    <Sidebar></Sidebar>
+    <MicroApp></MicroApp>
+  </div>
 </template>
 
 <style lang="less">
