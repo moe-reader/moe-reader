@@ -1,23 +1,27 @@
 <template>
-  <div>
-    <SidebarButton
-      v-for="(option, index) in options"
-      :key="index"
-      color-text
-      flex
-      flex-col
-      flex-1
-      :icon="option.icon"
-      :active="option.path ? route.path.startsWith(option.path) : false"
-      @click="MenuBtnOnClickGenerator(option)()"
-    ></SidebarButton>
-  </div>
+  <Draggable v-model="sidebarStore.sidebarOptions" item-key="id">
+    <template #item="{ element }">
+      <SidebarButton
+        color-text
+        flex
+        flex-col
+        flex-1
+        :icon="element.icon"
+        :active="element.path ? route.path.startsWith(element.path) : false"
+        @click="MenuBtnOnClickGenerator(element)()"
+      ></SidebarButton>
+    </template>
+  </Draggable>
 </template>
 
 <script setup lang="ts">
 import { buttonGroupOptions, buttonOption } from './constant'
 import SidebarButton from './SidebarButton.vue'
+import { useSidebarStore } from '@/store'
 import { useRoute, useRouter } from 'vue-router'
+import Draggable from 'vuedraggable'
+
+const sidebarStore = useSidebarStore()
 
 const router = useRouter()
 
