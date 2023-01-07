@@ -8,7 +8,7 @@
       flex-col
       flex-1
       :icon="option.icon"
-      :active="route.path.startsWith(option.path)"
+      :active="option.path ? route.path.startsWith(option.path) : false"
       @click="MenuBtnOnClickGenerator(option)()"
     ></SidebarButton>
   </div>
