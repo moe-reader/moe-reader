@@ -34,7 +34,12 @@ export default defineConfig({
   ],
   theme: {
     colors: {
-      primary: 'var(--color-primary)'
+      primary: 'var(--color-primary)',
+      success: 'var(--color-success)',
+      info: 'var(--color-info)',
+      warning: 'var(--color-warning)',
+      danger: 'var(--color-danger)',
+      text: 'var(--color-text-default)'
     }
   },
   presets: [
